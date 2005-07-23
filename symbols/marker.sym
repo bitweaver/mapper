@@ -1,0 +1,41 @@
+MARKERSET
+
+ Symbol
+    Name 'circle'
+    Type ELLIPSE
+    Filled
+    Points
+      1 1
+    END
+  END 
+
+  Symbol
+    Name 'interstate_shield'
+    Type PIXMAP
+    Image 'images/interstate.gif'
+    Transparent 7
+  END
+
+  Symbol
+    Name 'us_highway_shield'
+    Type PIXMAP
+    Image 'images/ushwy.gif'
+    Transparent 1
+  END
+
+  Symbol
+    Name 'state_highway_shield'
+    Type PIXMAP
+    Image 'images/sthwy.gif'
+  END 
+
+  Symbol
+    Name 'county_highway_shield'
+    Type PIXMAP
+    Image 'images/ctyhwy.gif'
+    Transparent 0	
+  END
+
+END # MapServer Demo Marker Set
+
+

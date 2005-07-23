@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Blank for MapFrame</title>
+<script language="javascript">
+//Load the script.html
+function Load1() {
+	parent.ScriptFrame.document.location = parent.scriptURL;
+}
+</script>
+</head>
+
+<script language="javascript">
+document.writeln('<body bgcolor="#FFFFFF">');
+
+var MapFrameWidth = "";
+var MapFrameHeight = "";
+
+if (parent.isIE) {
+        MapFrameWidth = document.body.clientWidth;
+        MapFrameHeight = document.body.clientHeight;
+        Load1();
+} else {
+        MapFrameWidth = window.innerWidth;
+        MapFrameHeight = window.innerHeight;
+      	Load1();
+}
+
+</script>
+<TABLE width=100% height="100%">
+<TR>
+<TD valign="middle" align="center">
+<img src="../graphics/loadMap.gif" alt="Loading Map File">
+
+</TD>
+</TR>
+
+</TABLE>
+</body>
+</html>

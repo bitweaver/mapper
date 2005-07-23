@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Karte</title>
+<script type="text/javascript" language="javascript" src="../scripts/wz_jsgraphics.js"></script>
+<script language="javascript">
+//Abkuerzungsvariablen
+var t = parent.ScriptFrame;
+var n = parent.FormFrame;
+var ROS = t.RahmOutSize;
+var RIS = t.RahmInSize;
+
+function reload(){
+	this.document.location.href = parent.ScriptFrame.htmlPfad + "start.html";
+}	
+</script>
+</head>
+
+<script language="javascript">
+if(t.MapFrameColor!=null){
+	document.writeln('<body bgcolor="' + t.MapFrameColor + '" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onresize="reload()">');
+}else{
+	document.writeln('<body bgcolor="#FFFFFF" onload="Load3()" leftmargin="1" topmargin="5" marginwidth="1" marginheight="5" onresize="reload()">');
+}
+
+//BackLayer1: outer Border
+t.createBackLayer1("mapBack1", t.rahmposleft, t.rahmpostop, t.BackWidth1, t.BackHeight1, 2, t.RahmOutColor, true);
+
+//BackLayer2 : Space between borders. Filled with Color or Image.
+if (t.RahmDistImage == true) { //(Variable from param.js)
+	t.createBackLayer2("mapBack2", (t.rahmposleft+ROS), (t.rahmpostop+ROS), t.BackWidth2, t.BackHeight2, 3, t.RahmImageURL, true);
+} else {
+	t.createBackLayer1("mapBack2", (t.rahmposleft+ROS), (t.rahmpostop+ROS), t.BackWidth2, t.BackHeight2, 3, t.RahmDistColor, true);
+}
+
+//BackLayer3: inner Border
+t.createBackLayer1("mapBack3", (t.posleft-RIS), (t.postop-RIS), t.BackWidth3, t.BackHeight3, 4, t.RahmInColor, true);
+
+//BackLayer4: Layer for the Backgroundcolor within MapLayer (becomes visible if the map is moved (Pan))
+t.createBackLayer1("mapBack4", t.posleft, t.postop, t.MapWidth, t.MapHeight, 5, t.MapBackColor, true);
+
+//MapLayer: Layer for the MapImage
+var MapLayer = new String;
+MapLayer = '<img src="' + n.map + '" border="0">';
+t.createMapLayer("mapimage", t.posleft, t.postop, t.MapWidth, t.MapHeight, 99, t.MapBackColor, true, MapLayer);
+
+//Layer for the directional pan buttons
+if (t.JumpTool_MF == true) { //(Variable from param.js)
+	//..."North"
+	var NorthLayer = new String;
+	NorthLayer = '<img src="' + t.NorthURL_MF + '" width="' + t.NorthSouthWidth_MF + '" height="' + t.NorthSouthHeight_MF +'" alt="' + t.toolName[1] + '" border="0" onmouseover="window.status=\' ' + t.toolName[1] + '\'" onmouseout="window.status=\'\'" onmousedown="parent.ScriptFrame.jump(\'north\')">';
+	t.createElseLayer("North", t.northposleft, t.northpostop, t.NorthSouthWidth_MF, t.NorthSouthHeight_MF, 6, true, NorthLayer);
+						
+	//..."South"
+	var SouthLayer = new String;
+	SouthLayer = '<img src="' + t.SouthURL_MF + '" width="' + t.NorthSouthWidth_MF + '" height="' + t.NorthSouthHeight_MF +'" alt="' + t.toolName[2] + '" border="0" onmouseover="window.status=\' ' + t.toolName[2] + '\'" onmouseout="window.status=\'\'" onmousedown="parent.ScriptFrame.jump(\'south\')">';
+	t.createElseLayer("South", t.southposleft, t.southpostop, t.NorthSouthWidth_MF, t.NorthSouthHeight_MF,7, true, SouthLayer);
+	
+	//..."East"
+	var EastLayer = new String;
+	EastLayer = '<img src="' + t.EastURL_MF + '" width="' + t.EastWestWidth_MF + '" height="' + t.EastWestHeight_MF +'" alt="' + t.toolName[3] + '" border="0" onmouseover="window.status=\' ' + t.toolName[3] + '\'" onmouseout="window.status=\'\'" onmousedown="parent.ScriptFrame.jump(\'east\')">';
+	t.createElseLayer("East", t.eastposleft, t.eastpostop, t.EastWestWidth_MF, t.EastWestHeight_MF, 8, true, EastLayer);
+	
+	//..."West"
+	var WestLayer = new String;
+	WestLayer = '<img src="' + t.WestURL_MF + '" width="' + t.EastWestWidth_MF + '" height="' + t.EastWestHeight_MF +'" alt="' + t.toolName[4] + '" border="0" onmouseover="window.status=\' ' + t.toolName[4] + '\'" onmouseout="window.status=\'\'" onmousedown="parent.ScriptFrame.jump(\'west\')">';
+	t.createElseLayer("West", t.westposleft, t.westpostop, t.EastWestWidth_MF, t.EastWestHeight_MF, 9, true, WestLayer);
+}
+
+//Scale-Layer: Layer for the Scalebar
+if (t.ShowScale == true) { //(Variable from param.js)
+	var ScaleLayer = new String;
+	ScaleLayer = '<img src="' + n.scale + '" border="0" alt="">';
+	t.createElseLayer("Scale", t.scaleposleft, t.scalepostop, t.ScaleWidth, t.ScaleHeight, 102, true, ScaleLayer);
+}
+
+//Status-Layer
+	var StatusLayer = new String;
+	StatusLayer = '<img src="' + t.StatusURL + '" width="' + t.StatusWidth + '" height="' + t.StatusHeight + '" border="0" alt="' + t.statusName + '">';
+	t.createElseLayer("Status", t.statusposleft, t.statuspostop, t.StatusWidth, t.StatusHeight, 101, false, StatusLayer);
+	
+	//Graphics-Layer: Layer for the Zommbox and the crosshair
+	document.writeln('<div id="myCanvas" style="position:absolute;height:'+t.MapHeight+'px;width:'+t.MapWidth+'px; top:'+t.postop+'px; left:'+t.posleft+'px; z-index:10000"></div>');
+	t.setEvents();
+	jg = new jsGraphics("myCanvas");
+	jg.setColor("#ff0000");
+	
+	document.writeln('<div id="crossCanvas" style="position:absolute;height:'+t.MapHeight+'px;width:'+t.MapWidth+'px; top:'+t.postop+'px; left:'+t.posleft+'px; z-index:9999"></div>');
+	crossH = new jsGraphics("crossCanvas");
+	crossH.setColor("#B2ADAD");
+	crossV = new jsGraphics("crossCanvas");
+	crossV.setColor("#B2ADAD");
+</script>
+</body>
+</html>
+

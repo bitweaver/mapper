@@ -1,0 +1,56 @@
+SYMBOL
+		NAME "downward"
+		TYPE vector
+		TRANSPARENT 0
+		POINTS
+			0 1
+			1 0			
+		END
+END
+
+SYMBOL
+	name "kreis"
+	TYPE ellipse
+	FILLED true
+	POINTS
+		1 1
+	END
+END 
+
+SYMBOL
+	name "dreieck"
+	TYPE vector
+	FILLED true
+	POINTS
+		0 4
+		2 0
+		4 4
+		0 4
+	END
+END
+
+SYMBOL
+	name "dreieck_kopf"
+	TYPE vector
+	FILLED true
+	POINTS
+		0 0
+		2 0
+		1 1
+		0 0
+	END
+END
+
+SYMBOL
+	name "square"
+	TYPE vector
+	FILLED true
+	POINTS
+		0 0
+		0 1
+		1 1
+		1 0
+		0 0
+	END
+END 
+

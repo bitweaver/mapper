@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Weiterführende Links</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript">
+var t = parent.ScriptFrame;
+document.write('<link rel="stylesheet" href="' + t.styleURL + '" type="text/css">');
+</script>
+</head>
+
+<script language="javascript">
+if(t.BereichColor1!=null){
+	document.writeln('<body scroll="auto" bgcolor="' + t.BereichColor1 + '" leftmargin="7" topmargin="5" marginwidth="7" marginheight="5" link="#000000" vlink="#000000" alink="#000000">');
+}else{
+	document.writeln('<body bgcolor="#FFFFFF" onload="Load3()" leftmargin="1" topmargin="5" marginwidth="1" marginheight="5">');
+}
+document.writeln('<table width="100%" cellspacing="0" cellpadding="2" border="0">');
+if(t.linkTitle!=null){
+	document.writeln('<tr><td class="ueber1">' + t.linkTitle + '</td></tr>');
+}
+document.writeln('<tr><td colspan="3" height="5"><img src="' + t.px_buntURL + '" width="165" height="1" border="0" alt=""></td></tr>');
+for (i=0;i<t.weiterLink.length;i++) {
+	document.write('<tr>');
+	if(t.weiterLinkURL!=null){
+		document.write('<td class="link"><a href="' + t.weiterLinkURL[i] + '" target="_blank" title="' + t.weiterLinkName[i] + '">' + t.weiterLink[i] + '</a></td>');
+	}
+	document.write('</tr>');
+}
+</script>
+</table>
+</body>
+</html>

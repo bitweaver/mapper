@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Help on the map tools</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript">
+//Abkuerzungsvariablen
+var o = opener.parent.ScriptFrame;
+var ow = o.ToolWidth;
+var oh = o.ToolHeight;
+var nw = o.NorthSouthWidth_MF;
+var nh = o.NorthSouthHeight_MF;
+var ew = o.EastWestWidth_MF;
+var eh = o.EastWestHeight_MF;
+//Ausrichtung in den Tabellenzellen
+var vertical = "top";
+var horizontal = "center";
+document.write('<link rel="stylesheet" href="' + o.styleURL + '" type="text/css">');
+</script>
+</head>
+
+<script language="javascript">
+document.writeln('<body bgcolor="' + o.HelpWinColor + '" leftmargin="11" topmargin="9" marginwidth="11" marginheight="9" link="' + o.BereichColor2 + '" vlink="' + o.BereichColor2 + '" alink="' + o.BereichColor2 + '">');
+document.writeln('<table cellspacing="0" cellpadding="2" border="0">');
+document.writeln('<tr><td colspan="3" class="ueber1">Help on the map tools</td></tr>');
+document.writeln('<tr><td colspan="3" height="8"><img src="' + o.px_buntURL + '" width="356" height="1" border="0" alt=""></td></tr>');
+
+document.writeln('<tr><td align="' + horizontal + '"><img src="' + o.steuerungURL + '" width="12" height="33" border="0" alt="' + o.toolName[0] + '"></td>');
+document.writeln('<td><img src="' + o.pxURL + '" width="5" height="1" border="0" alt=""></td>');
+document.writeln('<td>You can select the visibility of the individual topics by clicking the respective "check box". For each change of a check box the map is re-loaded.</td></tr>');
+
+if (o.ZoomInTool) {
+document.writeln('<tr><td valign="' + vertical + '"><img src="' + o.ZoomInURL_o + '" width="' + ow + '" height="' + oh + '" border="0" alt="' + o.toolName[5] + '"></td>');
+document.writeln('<td></td>');
+document.writeln('<td>In order to increasing the map window you switch this button on and click into the map, the window is increased around the selected point and centered on it. In order to determine an accurate cutout, you can draw a frame on the map by holding down the left mouse button and pulling it out to the area required.</td></tr>');
+}
+
+if (o.ZoomOutTool) {
+document.writeln('<tr><td valign="' + vertical + '"><img src="' + o.ZoomOutURL_o + '" width="' + ow + '" height="' + oh + '" border="0" alt="' + o.toolName[6] + '"></td>');
+document.writeln('<td></td>');
+document.writeln('<td>In order to decrease the map window you switch this button on and click into the map, the window is made smaller around the selected point and centered on it. In order to select an accurate window, you can draw a frame on the map by holding down the left mouse button and pulling it out to the area required.</td></tr>');
+}
+
+if (o.FullExtentTool) {
+document.writeln('<tr><td valign="' + vertical + '"><img src="' + o.FullExtentURL + '" width="' + ow + '" height="' + oh + '" border="0" alt="' + o.toolName[7] + '"></td>');
+document.writeln('<td></td>');
+document.writeln('<td>You reach the total view of the map through pressures of this button.</td></tr>');
+}
+
+if (o.PanTool) {
+document.writeln('<tr><td valign="' + vertical + '"><img src="' + o.PanURL_o + '" width="' + ow + '" height="' + oh + '" border="0" alt="' + o.toolName[8] + '"></td>');
+document.writeln('<td></td>');
+document.writeln('<td>In order to drag the map on a different point, you switch this button on and click the map with the left mouse button and drag the map in the desired direction.</td></tr>');
+}
+
+
+if (o.IdentifyTool) {
+document.writeln('<tr><td valign="' + vertical + '"><img src="' + o.IdentifyURL_o + '" width="' + ow + '" height="' + oh + '" border="0" alt="' + o.toolName[9] + '"></td>');
+document.write('<td></td>');
+document.write('<td>Additional information on the visible map objects are displayed if you switch on this button and click in the map with the left mouse button on the appropriate object.</td></tr>');
+}
+
+
+if (o.HelpTool) {
+document.writeln('<tr><td valign="' + vertical + '"><img src="' + o.HelpURL + '" width="' + ow + '" height="' + oh + '" border="0" alt="' + o.toolName[10] + '"></td>');
+document.writeln('<td></td>');
+document.writeln('<td>This pop-up help window was opened by operation of this button.</td></tr>');
+}
+
+if (o.JumpTool_MF) {
+document.writeln('<tr><td colspan="2"></td>');
+document.writeln('<td>Shift the visible map cutout with the following buttons</td></tr>');
+document.writeln('<tr><td valign="' + vertical + '" align="' + horizontal + '"><img src="' + o.NorthURL_MF + '" width="' + nw + '" height="' + nh + '" border="0" alt="' + o.toolName[1] + '"></td>');
+document.writeln('<td></td>');
+document.writeln('<td>... to the North.</td></tr>');
+document.writeln('<tr><td valign="' + vertical + '" align="' + horizontal + '"><img src="' + o.SouthURL_MF + '" width="' + nw + '" height="' + nh + '" border="0" alt="' + o.toolName[2] + '"></td>');
+document.writeln('<td></td>');
+document.writeln('<td>... to the South.</td></tr>');
+document.writeln('<tr><td valign="' + vertical + '" align="' + horizontal + '"><img src="' + o.EastURL_MF + '" width="' + ew + '" height="' + eh + '" border="0" alt="' + o.toolName[3] + '"></td>');
+document.writeln('<td></td>');
+document.writeln('<td>... to the East</td></tr>');
+document.writeln('<tr><td valign="' + vertical + '" align="' + horizontal + '"><img src="' + o.WestURL_MF + '" width="' + ew + '" height="' + eh + '" border="0" alt="' + o.toolName[4] + '"></td>');
+document.writeln('<td></td>');
+document.writeln('<td>... to the West.</td></tr>');
+}
+
+document.writeln('<tr><td valign="' + vertical + '"></td>');
+document.writeln('<td></td>');
+document.writeln('<td>Fast navigation around the map is provided by the overview window. Clicking on a point in the overview window will move the currently selected window to center on the new point. This allows you to select a quite small area on the map, such as round a town, and then move to other towns on the overview without having to change the window size.</td></tr>');
+
+document.writeln('<tr><td valign="' + vertical + '"></td>');
+document.writeln('<td></td>');
+document.writeln('<td>The map can be printed using the print function of the Browsers (menu file/print...). On an optimal result landscape format should be selected.</td></tr>');
+</script>
+</table>
+</body>
+</html>

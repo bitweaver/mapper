@@ -1,0 +1,165 @@
+<html>
+<head>
+<title>Navigation</title>
+<link rel="stylesheet" href="../styles/client.css" type="text/css">
+
+<script language="javascript">
+var t = parent.ScriptFrame;
+
+function updateLayer(){
+	if(t.layerList.length>1){
+		for(i=0;i<this.document.navi.layer.length;i++) {
+			if (this.document.navi.layer[i].checked) {
+				t.layerVisible[i]=1;
+			} else {
+				t.layerVisible[i]=0;
+			}
+		}
+	} else {
+			if (this.document.navi.layer.checked) {
+				t.layerVisible[0]=1;
+			} else {
+				t.layerVisible[0]=0;
+			}
+	}
+	if(t.hasCommonLayers){
+		if(t.commonLayerList.length>1){
+			for(j=0;j<this.document.navi.common.length;j++) {
+				if (this.document.navi.common[j].checked) {
+					t.commonLayerIsVisible[j]=1;
+				} else {
+					t.commonLayerIsVisible[j]=0;
+				}
+			}
+		}
+		else {
+				if (this.document.navi.common.checked) {
+					t.commonLayerIsVisible[0]=1;
+				} else {
+					t.commonLayerIsVisible[0]=0;
+				}
+		}
+	}
+	t.refreshMap('newLayer');
+
+}
+
+
+function refreshVisibility() {
+	if(t.layerList.length>1){
+		for(i=0;i<this.document.navi.layer.length;i++) {
+			if (this.document.navi.layer[i].checked) {
+				t.layerVisible[i]=1;
+			} else {
+				t.layerVisible[i]=0;
+			}
+		}
+	} else {
+			if (this.document.navi.layer.checked) {
+				t.layerVisible[0]=1;
+			} else {
+				t.layerVisible[0]=0;
+			}
+	}
+	if(t.hasCommonLayers){
+		if(t.commonLayerList.length>1){
+			for(j=0;j<this.document.navi.common.length;j++) {
+				if (this.document.navi.common[j].checked) {
+					t.commonLayerIsVisible[j]=1;
+				} else {
+					t.commonLayerIsVisible[j]=0;
+				}
+			}
+		}
+		else {
+				if (this.document.navi.common.checked) {
+					t.commonLayerIsVisible[0]=1;
+				} else {
+					t.commonLayerIsVisible[0]=0;
+				}
+		}
+	}
+}
+
+
+</script>
+</head>
+
+<script language="javascript">
+
+var t = parent.ScriptFrame;
+	if (t.isNav){
+		if(t.BereichColor1!=null){
+			document.writeln('<body  bgcolor="' + t.BereichColor1 + '" marginwidth="7" marginheight="0" vlink="#000000" link="#000000" alink="#000000">');
+		}else{
+		document.writeln('<body bgcolor="#FFFFFF" onload="Load3()" leftmargin="1" topmargin="5" marginwidth="1" marginheight="5">');
+		}
+	} else {
+		if(t.BereichColor1!=null){
+			document.writeln('<body  bgcolor="' + t.BereichColor1 + '" leftmargin="7" topmargin="5" marginwidth="7" marginheight="5" vlink="#000000" link="#000000" alink="#000000">');
+		}else{
+		document.writeln('<body bgcolor="#FFFFFF" onload="Load3()" leftmargin="1" topmargin="5" marginwidth="1" marginheight="5">');
+		}
+	}
+	document.writeln('<table width="100% border="0" cellspacing="0" cellpadding="0">');
+	document.writeln('<tr><td><img src="' + t.sichtbarURL + '" width="14" height="14" border="0" hspace="4" alt="' + t.toolName[0] + '" onmouseover="window.status=\' ' + t.toolName[0] + '\'" onmouseout="window.status=\'\'"></td>');
+	document.writeln('<td colspan="2"></td></tr>');
+	document.writeln('<form name="navi">');
+	
+	for(i=0;i<t.layerList.length;i++){
+		document.writeln('<tr>');
+		document.writeln('<td>');
+		document.write('<input type="checkbox"  name="layer" value="' + t.layerList[i] + '"');
+		if(t.autoRefresh){
+			 document.write(' onClick="updateLayer()"');
+		}else{
+			document.writeln(' onClick="refreshVisibility()"');
+		}
+		
+		if(t.layerVisible[i]) document.write(' checked');
+		document.writeln('></td>');
+		document.writeln('<td>');
+		document.writeln('</td>');
+		document.writeln('<td>');
+		if (t.layerLink[i]) {
+			document.writeln('<a href="#" id="' + i + '" title="'+t.layerLinkName[i]+'" onmousedown="t.WindowLink('+i+')">&nbsp;' + t.layerAlias[i] + '</a>');
+		} else {
+			document.writeln(t.layerAlias[i]);
+		}
+		if(t.layerIsQueryable[i]) document.writeln('<img src="'+t.queryURL+'">');
+		document.writeln('</td>');
+		document.writeln('</tr>');
+	}
+	
+	document.writeln('<tr><td height="5"></td></tr>');	
+	if(t.hasCommonLayers){
+		document.writeln('<tr><td colspan="3" class="ueber1">Basisinformationen</td></tr>');
+		document.writeln('<tr><td colspan="3" height="10"><img src="' + t.px_buntURL + '" width="168" height="1" border="0" alt=""></td></tr>');
+		
+		for(i=0;i<t.commonLayerList.length;i++) {
+			document.writeln('<tr>');
+			document.writeln('<td>');
+			document.writeln('<input type="checkbox" name="common" value="'+t.commonLayerList[i]+'"');
+			if(t.autoRefresh){
+				 document.write(' onClick="updateLayer()"');
+			}else{
+				document.writeln(' onClick="refreshVisibility()"');
+			}
+			if(t.commonLayerIsVisible[i]) document.writeln(' checked');
+			document.writeln('></td>');
+			document.writeln('<td></td>');
+			document.writeln('<td>&nbsp;'+t.commonLayerAlias[i]+'</td>');
+			document.writeln('</tr>');
+		}
+	}
+	
+document.writeln('</form>');
+document.writeln('</table>');
+if(t.autoRefresh==false){
+    document.writeln('<DIV align="center" style="margin-top:25px;">');
+	document.writeln('<img src="'+t.bildPfad1+'/nk2.gif" onMouseDown="updateLayer()"');
+	document.writeln('</DIV>');
+}
+</script>
+</body>
+</html>

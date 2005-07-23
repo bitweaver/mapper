@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <script language="javascript">
+//Abkuerzungsvariable
+var o = opener.parent.ScriptFrame;
+document.writeln('<title>' + o.identifyTitle + '</title>');
+document.writeln('<link rel="stylesheet" href="' + o.styleURL + '" type="text/css">');
+  </script>
+  <script language="javascript">
+document.writeln('<body bgcolor="' + o.IdentifyWinColor + '" leftmargin="13" topmargin="11" marginwidth="13" marginheight="11">');
+  </script>
+</head>
+<body leftmargin="13" topmargin="11" marginheight="11" marginwidth="13">
+<div class="ueber1">No element ahs been found to displaying information
+for.
+</div>
+<div>In the layers:</div>
+<script language="javascript">
+o = opener.parent.ScriptFrame;
+for(i=0; i<o.layerList.length;i++){
+	if(o.layerIsQueryable[i]){
+		document.writeln('<DIV><B>');
+		document.writeln(o.layerAlias[i]+'<BR>');
+		document.writeln('</B></DIV>');
+		document.writeln('<DIV>There is no symbol <img src="'+o.queryURL+'"> at this location in the layer');
+	}
+}
+</script>
+</body>
+</html>

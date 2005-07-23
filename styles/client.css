@@ -1,0 +1,73 @@
+td, body, p{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 11px;
+font-style: normal;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+}
+
+div {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 11px;
+font-style: normal;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+margin-top: 10px;
+}
+
+.ueber1 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: bold;
+color: #929292;
+text-decoration: none;
+}
+
+.ueber2 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: bold;
+color: #000000;
+text-decoration: none
+}
+
+.ueber3 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 36px;
+font-style: normal;
+font-weight: bold;
+color: #111111;
+text-decoration: none
+}
+
+.query1 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: bold;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+text-align: left
+}
+
+.query2 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+font-style: normal;
+font-weight: normal;
+color: #000000;
+text-decoration: none;
+text-align: left
+}
+
+.link {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 11px;
+font-style: normal;
+color: #000000;
+text-decoration: none
+}

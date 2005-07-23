@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Initialize the Map</title>
+</head>
+
+<script language="javascript">
+var t = parent.ScriptFrame;
+document.writeln('<body>');
+document.writeln('<form name="init" method=GET action="' + t.exePfad + '">');
+document.writeln('<input type="hidden" name="map" value="' + t.mapPfad + '">');
+for (i=0;i<t.layerList.length;i++) {
+		if (t.layerVisible[i]==1) document.writeln('<input type="hidden" name="layer" value="' + t.layerList[i] + '">');
+}
+for (i=0;i<t.commonLayerList.length;i++) {
+	if(t.commonLayerIsVisible[i]==1) document.writeln('<input type="hidden" name="layer" value="' + t.commonLayerList[i] + '">');
+}
+document.writeln('<input type="hidden" name="zoomsize" value="' + t.zoomsize + '">');
+document.writeln('<input type="hidden" name="mapsize" value="' + t.MapWidth + ' ' + t.MapHeight + '">');
+parent.FormFrame.document.init.submit();
+
+</script>
+</form>
+</body>
+</html>

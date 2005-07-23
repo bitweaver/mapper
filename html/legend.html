@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Legende</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript">
+
+var t = parent.ScriptFrame;
+document.write('<link rel="stylesheet" href="' + t.styleURL + '" type="text/css">');
+</script>
+</head>
+<BODY bgcolor="#FFFFFF">
+<script language="javascript">
+if(t.LegendFrameColor!=null){
+	document.writeln('<body scroll="auto" bgcolor="' + t.LegendFrameColor + '" leftmargin="1" topmargin="2" marginwidth="1" marginheight="2">');
+}else{
+	document.writeln('<body bgcolor="#FFFFFF" onload="Load3()" leftmargin="1" topmargin="5" marginwidth="1" marginheight="5">');
+}
+//document.writeln('<tr><td><img src="' + parent.FormFrame.leg + '" border="0"></td></tr>');
+if(parent.ScriptFrame.hasHTMLLegend){
+	document.writeln('<TABLE>');
+	if (parent.FormFrame.leg!=null){
+		document.writeln(parent.FormFrame.leg);
+	}
+	document.writeln('</TABLE>');
+} else {
+	document.writeln('<img src="'+parent.FormFrame.leg+'">');
+}
+</script>
+</body>
+</html>

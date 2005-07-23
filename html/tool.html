@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Toolbar</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript">
+var t = parent.ScriptFrame; 
+var tw = t.ToolWidth;
+var th = t.ToolHeight;
+//alignment of the toolbar buttons
+var horizontal = "left";
+document.writeln('<link rel="stylesheet" href="' + t.styleURL + '" type="text/css">');
+</script>
+</head>
+
+<script language="javascript">
+if(t.ToolFrameColor !=null){
+	document.writeln('<body bgcolor="' + t.ToolFrameColor +'" leftmargin="1" topmargin="0" marginwidth="1" marginheight="0">');
+}else{
+	document.writeln('<body bgcolor="#FFFFFF" onload="Load3()" leftmargin="1" topmargin="5" marginwidth="1" marginheight="5">');
+}
+document.writeln('<div align="center">');
+document.writeln('<table width="77" cellspacing="0" cellpadding="1" border="0">');
+document.writeln('<tr><td colspan="6" height="3"></td></tr>');
+document.writeln('<tr>');
+if (t.ZoomInTool) {
+document.writeln('<td align="' + horizontal + '"><img name="zoomin" src="' + t.ZoomInURL + '" width="' + tw + '" height="' + th + '" alt="' + t.toolName[5] + '" onmouseover="window.status=\' ' + t.toolName[5] + '\'" onmouseout="window.status=\'\'" onmousedown="t.setTool(\'zoomin\');t.turnSelected(\'zoomin\')"></td>');
+}
+if (t.ZoomOutTool) {
+document.writeln('<td align="' + horizontal + '"><img name="zoomout" src="' + t.ZoomOutURL + '" width="' + tw + '" height="' + th + '" alt="' + t.toolName[6] + '" onmouseover="window.status=\' ' + t.toolName[6] + '\'" onmouseout="window.status=\'\'" onmousedown="t.setTool(\'zoomout\');t.turnSelected(\'zoomout\')"></td>');
+}
+if (t.FullExtentTool) {
+document.writeln('<td align="' + horizontal + '"><img name="fextent" src="' + t.FullExtentURL + '" width="' + tw + '" height="' + th + '" alt="' + t.toolName[7] + '" onmouseover="window.status=\' ' + t.toolName[7] + '\'" onmouseout="window.status=\'\'" onmousedown="t.setTool(\'fullextent\')"></td>');
+}
+if (t.PanTool) {
+document.writeln('<td align="' + horizontal + '"><img name="pan" src="' + t.PanURL + '" width="' + tw + '" height="' + th + '" alt="' + t.toolName[8] + '" onmouseover="window.status=\' ' + t.toolName[8] + '\'" onmouseout="window.status=\'\'" onmousedown="t.setTool(\'pan\');t.turnSelected(\'pan\')"></td>');
+}
+if (t.IdentifyTool) {
+document.writeln('<td align="' + horizontal + '"><img name="identify" src="' + t.IdentifyURL + '" width="' + tw + '" height="' + th + '" alt="' + t.toolName[9] + '" onmouseover="window.status=\' ' + t.toolName[9] + '\'" onmouseout="window.status=\'\'" onmousedown="t.setTool(\'identify\');t.turnSelected(\'identify\')"></td>');
+}
+if (t.HelpTool) {
+document.writeln('<td align="' + horizontal + '"><img name="help" src="' + t.HelpURL + '" width="' + tw + '" height="' + th + '" alt="' + t.toolName[10] + '" onmouseover="window.status=\' ' + t.toolName[10] + '\'" onmouseout="window.status=\'\'" onmousedown="t.setTool(\'help\')"></td>');
+}
+document.writeln('</tr>');
+</script>
+</table>
+</div>
+<div align="center">
+<form name="coordinateDisplay">
+x: <input type="text" name="x"><BR>
+y: <input type="text" name="y">
+</form>
+</div>
+</body>
+</html>

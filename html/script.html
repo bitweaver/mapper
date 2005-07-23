@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Page for loading Javascript</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="cache-control" content="no-cache">
+<script language="javascript">
+document.write('<link rel="stylesheet" href="' + parent.styleURL + '" type="text/css">');
+
+var m = parent.MapFrame;
+
+//get the MapFrame-Size from map_blank.html
+var MapFrameWidth = m.MapFrameWidth;
+var MapFrameHeight = m.MapFrameHeight;
+
+function Load2() {
+	parent.FormFrame.document.location = initURL;
+	parent.ToolFrame.document.location = toolURL;
+	parent.NaviFrame.document.location = naviURL;
+	parent.LinkFrame.document.location = linkURL;
+	
+}
+
+//keeps track of child windows and closes them upon unload
+function closeWindows() {
+	if (tooglelink == false) {
+		LinkWindow.close();
+	}
+	if (tooglehelp == false) {
+		HelpWindow.close();
+	}
+	if (toogleimpress == false) {
+		ImpressWindow.close();
+	}
+}
+
+</script>
+
+<script type="text/javascript" language="JavaScript" src="../scripts/form.js"></script>
+<script type="text/javascript" language="JavaScript" src="../scripts/param1.js"></script>
+<script type="text/javascript" language="JavaScript" src="../scripts/browser.js"></script>
+<script type="text/javascript" language="JavaScript" src="../scripts/common.js"></script>
+<script type="text/javascript" language="JavaScript" src="../scripts/layer.js"></script>
+<script type="text/javascript" language="JavaScript" src="../scripts/toolbar.js"></script>
+<script type="text/javascript" language="JavaScript" src="../scripts/zoombox.js"></script>
+<script type="text/javascript" language="JavaScript" src="../scripts/nav.js"></script>
+<script type="text/javascript" language="JavaScript" src="../scripts/query.js"></script>
+</head>
+
+<script language="javascript">
+document.writeln('<body onload="Load2()" bgcolor="' + BereichColor1 + '" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" background="" onunload="closeWindows()">');
+
+</script>
+<TABLE width="100%">
+<TR>
+<TD class="ueber3">L.S.Caine Electronic Services - MapServer</TD>
+<TD width="160px" align="center"><img src="../graphics/lsces_logo.jpg"></TD>
+
+</TR>
+</TABLE>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>FormularFrame</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pragma" content="no-cache">
+<script language="javascript">
+//Abkuerzungsvariable
+var t = parent.ScriptFrame;
+document.writeln('<link rel="stylesheet" href="' + t.styleURL + '" type="text/css">');
+
+//Variables that holds the information coming back with the mapserver response
+//Scalebarimage
+var scale = new String;
+scale = "[scalebar]";
+//Mapimage
+var map = new String;
+map = "[img]";
+//Legendimage or legend html (depends on legend mode)
+var leg = new String;
+leg = '[legend]';
+//Mapextent
+var ext = new String;
+ext = "[mapext]";
+parent.ScriptFrame.imgext = ext;
+
+
+//Reloads the Map and the Legend whenever a new Map is drawn
+function Load3() {
+	parent.MapFrame.document.location = t.mapURL;
+	parent.LegendFrame.document.location = t.legendURL;
+}
+</script>
+</head>
+
+<script language="javascript">
+if(t.FormFrameColor!=null){
+	document.writeln('<body bgcolor="' + t.FormFrameColor + '" onload="Load3()" leftmargin="1" topmargin="5" marginwidth="1" marginheight="5">');
+}else{
+	document.writeln('<body bgcolor="#FFFFFF" onload="Load3()" leftmargin="1" topmargin="5" marginwidth="1" marginheight="5">');
+}
+document.writeln('<table width="100%" border="0" cellspacing="0" cellpadding="1">');
+</script>
+<tr>
+<td align="center">
+
+<form name="mapserv" action="[program]">
+<input type="hidden" name="program" value="[program]">
+<INPUT NAME="ref" TYPE="image" SRC="[ref]" border="0">
+<input type="hidden" name="map" value="[map]">
+<input type="hidden" name="imgext" value="[mapext]">
+<input type="hidden" name="layers" value="[layers]">
+<input type="hidden" name="mapsize" value="[mapsize]">
+</Form>
+
+</tr>
+</table>
+</body>
+</html>

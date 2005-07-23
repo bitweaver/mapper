@@ -1,0 +1,3 @@
+arial  arial.ttf
+symbol1 Wingdng2.ttf
+symbol2 Wingdng3.ttf
