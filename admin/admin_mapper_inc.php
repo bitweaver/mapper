@@ -12,5 +12,5 @@ if( !empty( $_REQUEST['save'] ) ) {
 }
 
 // assign to smarty
-$smarty->assign('mapperSettings', $mapper->mSettings );
+$gBitSmarty->assign('mapperSettings', $mapper->mSettings );
 ?>
