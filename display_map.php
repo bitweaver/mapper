@@ -1,13 +1,18 @@
 <?php
+/**
+ * $Header: /cvsroot/bitweaver/_bit_mapper/display_map.php,v 1.3 2005/08/17 08:51:59 lsces Exp $
+ *
+ * Copyright ( c ) 2004 bitweaver.org
+ * All Rights Reserved. See copyright.txt for details and a complete list of authors.
+ * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details
+ *
+ * @package mapper
+ * @subpackage functions
+ */
 
-// $Header: /cvsroot/bitweaver/_bit_mapper/display_map.php,v 1.2 2005/07/30 12:07:19 lsces Exp $
-
-// Copyright (c) 2002-2003, Lester Caine - lsces. gdv Client
-// wz_jsgraphics.js Copyright - Copyright (c) 2002-2004 Walter Zorn.
-// All Rights Reserved. See copyright.txt for details and a complete list of authors.
-// Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
-
-// Initialization
+/**
+ * required setup
+ */
 require_once( '../bit_setup_inc.php' );
 
 // require_once( LIBERTY_PKG_PATH.'lookup_content_inc.php');
