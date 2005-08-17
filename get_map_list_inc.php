@@ -3,8 +3,8 @@
  * get_content_list
  *
  * @author   Christian Fowler>
- * @version  $Revision: 1.1 $
- * @package  Liberty
+ * @version  $Revision: 1.2 $
+ * @package  mapper
  * @subpackage functions
  */
 
