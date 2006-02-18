@@ -1,7 +1,11 @@
 <?php
 global $gBitSystem;
 
-$gBitSystem->registerPackage( 'mapper', dirname( __FILE__ ).'/' );
+$registerHash = array(
+	'package_name' => 'mapper',
+	'package_path' => dirname( __FILE__ ).'/',
+);
+$gBitSystem->registerPackage( $registerHash );
 
 if( $gBitSystem->isPackageActive( 'mapper' ) ) {
 
