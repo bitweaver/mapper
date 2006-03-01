@@ -2,7 +2,7 @@
 /**
 * @package mapper
 * @author lsces <lester@lsces.co.uk>
-* @version $Revision: 1.1 $
+* @version $Revision: 1.2 $
 */
 
 /**
@@ -29,7 +29,7 @@ class BitMapper extends LibertyAttachable
 		global $gBitSystem;
 		$this->mSettings = $this->getDefaultSettings();
 		foreach( array_keys( $this->mSettings ) as $key ) {
-			$keyPref = $gBitSystem->getPreference( $key, NULL );
+			$keyPref = $gBitSystem->getConfig( $key, NULL );
 			if( !empty( $keyPref ) ) {
 				$this->mSettings[$key] = $keyPref;
 			}
@@ -60,7 +60,7 @@ class BitMapper extends LibertyAttachable
 		$gBitSystem->expungePackagePreferences( MAPPER_PKG_NAME );
 		if( $this->verifySettings( $pParamHash ) ) {
 			foreach( array_keys( $pParamHash['setting_store'] ) as $key ) {
-				$gBitSystem->storePreference( $key, $pParamHash['setting_store'][$key],  MAPPER_PKG_NAME );
+				$gBitSystem->storeConfig( $key, $pParamHash['setting_store'][$key],  MAPPER_PKG_NAME );
 				$this->mSettings[$key] = $pParamHash['setting_store'][$key];
 			}
 		}
