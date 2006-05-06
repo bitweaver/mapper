@@ -6,9 +6,6 @@ $gBitInstaller->makePackageHomeable('mapper');
 $gBitInstaller->registerPackageInfo( MAPPER_PKG_NAME, array(
 	'description' => "Mapserver client interface and archive.",
 	'license' => '<a href="http://www.gnu.org/licenses/licenses.html#LGPL">LGPL</a>',
-	'version' => '0.1',
-	'state' => 'beta',
-	'dependencies' => 'html',
 ) );
 
 
