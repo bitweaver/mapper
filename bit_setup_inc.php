@@ -10,6 +10,11 @@ $gBitSystem->registerPackage( $registerHash );
 
 if( $gBitSystem->isPackageActive( 'mapper' ) ) {
 
-	$gBitSystem->registerAppMenu( 'mapper', $gBitSystem->getConfig('mapper_menu_text','Mapper'), MAPPER_PKG_URL.'index.php', 'bitpackage:mapper/menu_mapper.tpl', 'Map Archive');
+	$menuHash = array(
+		'package_name'  => MAPPER_PKG_NAME,
+		'index_url'     => MAPPER_PKG_URL.'index.php',
+		'menu_template' => 'bitpackage:mapper/menu_mapper.tpl',
+	);
+	$gBitSystem->registerAppMenu( $menuHash );
 }
 ?>
