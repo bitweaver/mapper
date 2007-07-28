@@ -3,7 +3,7 @@
 //... mapserv binary
 var exePfad="/cgi-bin/mapserv.exe";
 //... machine name/ domain name
-var host = "study";
+var host = "engineering";
 //... application path (url-path to [...]/client/)
 var applicationPath = "http://"+host+"/bitweaverdev/mapper/";
 
@@ -11,7 +11,7 @@ var applicationPath = "http://"+host+"/bitweaverdev/mapper/";
 hasHTMLLegend = true;
 
 //...map file
-var mapPfad = "c:\\Website\\bitweaverdev\\mapper\\map\\rlp.map";
+var mapPfad = "d:\\Website\\bitweaverdev\\mapper\\map\\rlp.map";
 //for Windows something like d:\\projekte\\mapfiles\\myMap.map - notice the double slahses
 //for Unix/Linux /home/user/mapfiles/myMap.map
 
@@ -108,8 +108,8 @@ var BereichColor1 = "#FFFFFF";
 var BereichColor2 = "#F4B900";
 
 //... various file pathes
-var themenPfad = applicationPath + "theme/"
-var htmlPfad = applicationPath + "html/";
+var themenPfad = "../theme/"
+var htmlPfad = "../html/";
 var startURL = htmlPfad + "start.html";
 var scriptURL = htmlPfad  + "script.html";
 var initURL = htmlPfad + "map_init.html";
@@ -120,9 +120,9 @@ var legendURL = htmlPfad + "legend.html";
 var linkURL = htmlPfad  + "link.html";
 var helpURL = htmlPfad + "help.html";
 var impressURL = htmlPfad + "impress.html"
-var bildPfad1 = applicationPath + "graphics/";
-var bildPfad2 = applicationPath + "graphics/";
-var styleURL = applicationPath + "styles/client.css";
+var bildPfad1 = "../graphics/";
+var bildPfad2 = "../graphics/";
+var styleURL = "../styles/client.css";
 
 //*************Properties for the links that appear in the LinkFrame**************
 //Title for the Links
