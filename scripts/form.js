@@ -11,7 +11,7 @@ function writeCGIForm(){
 	formString += '<INPUT type="hidden" name="mapext" value="'+mapext+'">';
 	formString += '<INPUT type="hidden" name="mode" value="'+mode+'">';
 	formString += '<INPUT type="hidden" name="imgbox" value="'+imgbox+'">';
-	formString += '<INPUT type="hidden" name="map_size" value="'+MapWidth+' '+MapHeight+'">';
+	formString += '<INPUT type="hidden" name="mapsize" value="'+MapWidth+' '+MapHeight+'">';
 	formString += '<INPUT type="hidden" name="imgext" value="'+imgext+'">';
 	formString += '<INPUT type="hidden" name="zoomdir" value="'+zoomdir.toString()+'">';
 	formString += '<INPUT type="hidden" name="zoomsize" value="'+zoomsize+'">';

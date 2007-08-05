@@ -39,7 +39,7 @@ function makeQueryURL() {
 			URLString += "&savequery="+savequery;
 			//URLString += "&mapext=shapes";
 			URLString += "&mode=nquery";
-			URLString += "&map_size="+ MapWidth + "+" + MapHeight;
+			URLString += "&mapsize="+ MapWidth + "+" + MapHeight;
 			showQuery(URLString);
 		 }
 }
