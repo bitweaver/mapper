@@ -2,7 +2,7 @@
 /**
 * @package mapper
 * @author lsces <lester@lsces.co.uk>
-* @version $Revision: 1.2 $
+* @version $Revision: 1.3 $
 */
 
 /**
@@ -12,7 +12,6 @@ require_once( LIBERTY_PKG_PATH.'LibertyAttachable.php' );		// FisheyeGallery bas
 
 /**
 * @package mapper
-* @subpackage BitMapper
 */
 class BitMapper extends LibertyAttachable
 {
