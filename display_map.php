@@ -1,6 +1,6 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_mapper/display_map.php,v 1.3 2005/08/17 08:51:59 lsces Exp $
+ * $Header: /cvsroot/bitweaver/_bit_mapper/display_map.php,v 1.4 2008/06/25 22:21:13 spiderr Exp $
  *
  * Copyright ( c ) 2004 bitweaver.org
  * All Rights Reserved. See copyright.txt for details and a complete list of authors.
@@ -27,5 +27,5 @@ $gBitSystem->setBrowserTitle( 'Display Mapsever map');
 //$gBitSmarty->assign_by_ref( 'gDefaultCenter', $gDefaultCenter );
 $modMap = true;
 $gBitSmarty->assign( 'modMap', $modMap );
-$gBitSystem->display( 'bitpackage:mapper/center_view_map.tpl');
+$gBitSystem->display( 'bitpackage:mapper/center_view_map.tpl', NULL, array( 'display_mode' => 'display' ));
 ?>

@@ -3,7 +3,7 @@
  * list_content
  *
  * @author   spider <spider@steelsun.com>
- * @version  $Revision: 1.3 $
+ * @version  $Revision: 1.4 $
  * @package  mapper
  * @subpackage functions
  */
@@ -22,5 +22,5 @@ $gBitSmarty->assign( 'contentTypes', $contentTypes );
 $gBitSmarty->assign( 'contentList', $contentList['data'] );
 
 $gBitSystem->setBrowserTitle( 'List Map Archive' );
-$gBitSystem->display( 'bitpackage:mapper/list_maps.tpl' );
+$gBitSystem->display( 'bitpackage:mapper/list_maps.tpl' , NULL, array( 'display_mode' => 'list' ));
 ?>
