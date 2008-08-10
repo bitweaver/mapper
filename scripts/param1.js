@@ -27,6 +27,7 @@ layerList[0] = "IOM1880";
 //layerList[1] = "IOM1906";
 //layerList[2] = "IOM1940";
 //layerList[3] = "IOM1947";
+layerList[4] = "grid";
 //layerList[1] = "[layername]";
 
 //aliasnames for the thematic layer - these names will appear in the layertree
@@ -36,6 +37,7 @@ layerAlias[0] = "Isle of Man 1880";
 //layerAlias[1] = "Isle of Man 1906";
 //layerAlias[2] = "Isle of Man 1940";
 //layerAlias[3] = "Isle of Man 1947";
+layerAlias[4] = "Grid Overlay";
 //layerAlias[1] = "[layeralias]";Isle of Man 
 //should the thematic layer be visible on the first map?
 //(order as in layerList)
@@ -45,6 +47,7 @@ layerVisible[0] = 1;
 //layerVisible[1] = 0;
 //layerVisible[2] = 0;
 //layerVisible[3] = 0;
+layerVisible[4] = 0;
 //layerVisible[1] = 1;
 
 //should a thematic layer be queryable
@@ -54,6 +57,7 @@ layerIsQueryable[0] = false;
 //layerIsQueryable[1] = true;
 //layerIsQueryable[2] = true;
 //layerIsQueryable[3] = true;
+layerIsQueryable[4] = false;
 //layerIsQueryable[1] = false;
 
 //should the thematic layer be linked to further information - opens in new windows
@@ -64,6 +68,7 @@ layerLink[0] = 0;
 //layerLink[1] = 0;
 //layerLink[2] = 0;
 //layerLink[3] = 0;
+layerLink[4] = 0;
 
 //url to the page that contains the information
 //(order as in layerList)
@@ -80,6 +85,7 @@ layerLinkName[0] = "1880 Ordnance Survey";
 //layerLinkName[1] = "1906 Ordnance Survey";
 //layerLinkName[2] = "1940 Ordnance Survey";
 //layerLinkName[3] = "1947 Ordnance Survey";
+layerLinkName[4] = "Grid Overlay";
 
 //**************base layers********
 var hasCommonLayers = false;
@@ -108,8 +114,8 @@ var BereichColor1 = "#FFFFFF";
 var BereichColor2 = "#F4B900";
 
 //... various file pathes
-var themenPfad = "../theme/"
-var htmlPfad = "../html/";
+var themenPfad = applicationPath + "theme/"
+var htmlPfad = applicationPath + "html/";
 var startURL = htmlPfad + "start.html";
 var scriptURL = htmlPfad  + "script.html";
 var initURL = htmlPfad + "map_init.html";
@@ -120,9 +126,9 @@ var legendURL = htmlPfad + "legend.html";
 var linkURL = htmlPfad  + "link.html";
 var helpURL = htmlPfad + "help.html";
 var impressURL = htmlPfad + "impress.html"
-var bildPfad1 = "../graphics/";
-var bildPfad2 = "../graphics/";
-var styleURL = "../styles/client.css";
+var bildPfad1 = applicationPath + "graphics/";
+var bildPfad2 = applicationPath + "graphics/";
+var styleURL = applicationPath + "styles/client.css";
 
 //*************Properties for the links that appear in the LinkFrame**************
 //Title for the Links
