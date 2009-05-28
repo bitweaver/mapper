@@ -31,5 +31,5 @@
 			</div>
 		{/form}
 	</div><!-- end .body -->
-</div><!-- end .pdf -->
+</div><!-- end mapper -->
 {/strip}

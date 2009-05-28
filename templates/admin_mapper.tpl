@@ -34,6 +34,6 @@
 
 		{/jstab}
 	{/jstabs}
-</div><!-- end .pdf -->
+</div><!-- end mapper -->
 
 {/strip}
