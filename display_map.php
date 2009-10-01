@@ -1,10 +1,10 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_mapper/display_map.php,v 1.4 2008/06/25 22:21:13 spiderr Exp $
+ * $Header: /cvsroot/bitweaver/_bit_mapper/display_map.php,v 1.5 2009/10/01 13:45:44 wjames5 Exp $
  *
  * Copyright ( c ) 2004 bitweaver.org
  * All Rights Reserved. See copyright.txt for details and a complete list of authors.
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details
+ * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See http://www.gnu.org/copyleft/lesser.html for details
  *
  * @package mapper
  * @subpackage functions
