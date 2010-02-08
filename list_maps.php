@@ -3,7 +3,7 @@
  * list_content
  *
  * @author   spider <spider@steelsun.com>
- * @version  $Revision: 1.4 $
+ * @version  $Revision: 1.5 $
  * @package  mapper
  * @subpackage functions
  */
@@ -11,7 +11,7 @@
 /**
  * required setup
  */
-require_once("../bit_setup_inc.php");
+require_once("../kernel/setup_inc.php");
 
 // now that we have all the offsets, we can get the content list
 include_once( MAPPER_PKG_PATH.'get_map_list_inc.php' );

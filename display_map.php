@@ -1,6 +1,6 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_mapper/display_map.php,v 1.6 2009/10/01 14:17:02 wjames5 Exp $
+ * $Header: /cvsroot/bitweaver/_bit_mapper/display_map.php,v 1.7 2010/02/08 21:27:23 wjames5 Exp $
  *
  * Copyright ( c ) 2004 bitweaver.org
  * All Rights Reserved. See below for details and a complete list of authors.
@@ -13,7 +13,7 @@
 /**
  * required setup
  */
-require_once( '../bit_setup_inc.php' );
+require_once( '../kernel/setup_inc.php' );
 
 // require_once( LIBERTY_PKG_PATH.'lookup_content_inc.php');
 
