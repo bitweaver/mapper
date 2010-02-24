@@ -1,3 +1,4 @@
+MAP
 #
 # Start of map file
 #
@@ -6,7 +7,7 @@ STATUS ON
 SIZE 600 600
 EXTENT 213000 464300 250900 505524
 UNITS METERS
-SHAPEPATH "c:\\Website\\bitweaver\\mapper\\data"
+SHAPEPATH "/srv/www/lsces/mapper/data"
 
 TRANSPARENT OFF
 IMAGECOLOR 255 255 255
@@ -28,8 +29,8 @@ WEB
   TEMPLATE "../html/form.html"
   MINSCALE 1000
   MAXSCALE 1550000
-  IMAGEPATH "c:\Website\Tmp_Maps\"
-  IMAGEURL "/Tmp_Maps/"
+  IMAGEPATH "/srv/www/lsces/storage/maps/"
+  IMAGEURL "/storage/maps/"
   LOG "rlp.log"
   EMPTY "../theme/noFeature.html"
 END

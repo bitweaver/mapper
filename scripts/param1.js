@@ -1,17 +1,17 @@
 //***************path information*************** 
 //path to ...
 //... mapserv binary
-var exePfad="/cgi-bin/mapserv.exe";
+var exePfad="/cgi-bin/mapserv";
 //... machine name/ domain name
-var host = "engineering";
+var host = "lsces.co.uk";
 //... application path (url-path to [...]/client/)
-var applicationPath = "http://"+host+"/bitweaverdev/mapper/";
+var applicationPath = "http://"+host+"/mapper/";
 
 //legend setting - html legend or not?
 hasHTMLLegend = true;
 
 //...map file
-var mapPfad = "d:\\Website\\bitweaverdev\\mapper\\map\\rlp.map";
+var mapPfad = "/srv/www/lsces/mapper/map/rlp.map";
 //for Windows something like d:\\projekte\\mapfiles\\myMap.map - notice the double slahses
 //for Unix/Linux /home/user/mapfiles/myMap.map
 
@@ -145,7 +145,7 @@ weiterLink[7] = "";
 //URL
 //(order as in weiterLink)
 var weiterLinkURL = new Array();
-weiterLinkURL[0] = "http://home.lsces.co.uk";
+weiterLinkURL[0] = "http://lsces.co.uk";
 weiterLinkURL[1] = "http://mapserver.gis.umn.edu";
 weiterLinkURL[2] = "";
 weiterLinkURL[3] = "";

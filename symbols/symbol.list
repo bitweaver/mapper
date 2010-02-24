@@ -1,3 +1,4 @@
+SYMBOLSET
 SYMBOL
 		NAME "downward"
 		TYPE vector
@@ -53,4 +54,4 @@ SYMBOL
 		0 0
 	END
 END 
-
+END
