@@ -3,7 +3,7 @@
  * list_content
  *
  * @author   spider <spider@steelsun.com>
- * @version  $Revision: 1.5 $
+ * @version  $Revision: 1.6 $
  * @package  mapper
  * @subpackage functions
  */
@@ -19,7 +19,7 @@ include_once( MAPPER_PKG_PATH.'get_map_list_inc.php' );
 //$gBitSmarty->assign_by_ref('offset', $offset);
 $gBitSmarty->assign( 'contentSelect', $contentSelect );
 $gBitSmarty->assign( 'contentTypes', $contentTypes );
-$gBitSmarty->assign( 'contentList', $contentList['data'] );
+$gBitSmarty->assign( 'contentList', $contentList );
 
 $gBitSystem->setBrowserTitle( 'List Map Archive' );
 $gBitSystem->display( 'bitpackage:mapper/list_maps.tpl' , NULL, array( 'display_mode' => 'list' ));
