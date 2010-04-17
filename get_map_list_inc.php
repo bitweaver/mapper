@@ -3,7 +3,7 @@
  * get_content_list
  *
  * @author   Christian Fowler>
- * @version  $Revision: 1.2 $
+ * @version  $Revision: 1.3 $
  * @package  mapper
  * @subpackage functions
  */
@@ -26,6 +26,6 @@ $contentList = $gContent->getContentList( $contentSelect, isset( $offset_content
 
 $contentTypes = array();
 foreach( $gLibertySystem->mContentTypes as $cType ) {
-	$contentTypes[$cType['content_type_guid']] = $cType['content_description'];
+	$contentTypes[$cType['content_type_guid']] = $gLibertySystem->getContentTypeName( $cType['content_type_guid'] );
 }
 ?>
