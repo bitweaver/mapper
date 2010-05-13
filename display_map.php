@@ -1,6 +1,6 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_mapper/display_map.php,v 1.7 2010/02/08 21:27:23 wjames5 Exp $
+ * $Header: /cvsroot/bitweaver/_bit_mapper/display_map.php,v 1.8 2010/05/13 09:01:24 lsces Exp $
  *
  * Copyright ( c ) 2004 bitweaver.org
  * All Rights Reserved. See below for details and a complete list of authors.
@@ -19,6 +19,9 @@ require_once( '../kernel/setup_inc.php' );
 
 $gBitSystem->verifyPackage( 'mapper' );
 //$gBitSystem->verifyFeature( 'feature_map_display' );
+
+$gBitThemes->loadJavascript( MAPPER_PKG_PATH.'scripts/param1.js', FALSE, 600, FALSE );
+$gBitThemes->loadJavascript( MAPPER_PKG_PATH.'scripts/browser.js', FALSE, 601, FALSE );
 
 $gBitSystem->setBrowserTitle( 'Display Mapsever map');
 // PDF for '.$gContent->mInfo['title'] );
