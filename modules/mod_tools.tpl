@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_mapper/modules/mod_tools.tpl,v 1.3 2007/07/28 09:15:00 lsces Exp $ *}
+{* $Header$ *}
 {strip}
 {if $modMap}
 	{bitmodule title="$moduleTitle" name="tools"}

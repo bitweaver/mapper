@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_mapper/templates/center_view_map.tpl,v 1.4 2007/08/05 15:24:59 lsces Exp $ *}
+{* $Header$ *}
 <div class="floaticon">{bithelp}</div>
 
 <div class="display map">

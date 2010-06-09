@@ -1,6 +1,6 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_mapper/display_map.php,v 1.8 2010/05/13 09:01:24 lsces Exp $
+ * $Header$
  *
  * Copyright ( c ) 2004 bitweaver.org
  * All Rights Reserved. See below for details and a complete list of authors.

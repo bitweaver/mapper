@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_mapper/modules/mod_legend.tpl,v 1.4 2007/08/05 15:16:41 lsces Exp $ *}
+{* $Header$ *}
 {strip}
 {if $modMap}
 	{bitmodule title="$moduleTitle" name="legend"}

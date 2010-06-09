@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_mapper/modules/mod_navi.tpl,v 1.5 2010/02/24 20:42:26 lsces Exp $ *}
+{* $Header$ *}
 {strip}
 {if $modMap}
 	{bitmodule title="$moduleTitle" name="navi"}

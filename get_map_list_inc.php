@@ -3,7 +3,7 @@
  * get_content_list
  *
  * @author   Christian Fowler>
- * @version  $Revision: 1.3 $
+ * @version  $Revision$
  * @package  mapper
  * @subpackage functions
  */

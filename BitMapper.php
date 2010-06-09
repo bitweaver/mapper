@@ -2,7 +2,7 @@
 /**
 * @package mapper
 * @author lsces <lester@lsces.co.uk>
-* @version $Revision: 1.3 $
+* @version $Revision$
 */
 
 /**
