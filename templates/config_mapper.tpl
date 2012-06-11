@@ -22,7 +22,7 @@
 			<div class="row">
 				{formlabel label="Content Type"}
 				{forminput}
-					{$pageInfo.content_type.content_name}
+					{$pageInfo.content_type.content_description}
 				{/forminput}
 			</div>
 
