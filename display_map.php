@@ -20,9 +20,6 @@ require_once( '../kernel/setup_inc.php' );
 $gBitSystem->verifyPackage( 'mapper' );
 //$gBitSystem->verifyFeature( 'feature_map_display' );
 
-$gBitThemes->loadJavascript( MAPPER_PKG_PATH.'scripts/param1.js', FALSE, 600, FALSE );
-$gBitThemes->loadJavascript( MAPPER_PKG_PATH.'scripts/browser.js', FALSE, 601, FALSE );
-
 $gBitSystem->setBrowserTitle( 'Display Mapsever map');
 // PDF for '.$gContent->mInfo['title'] );
 
