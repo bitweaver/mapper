@@ -1,7 +1,7 @@
 {strip}
 {form legend="Search for map"}
 	<input type="hidden" name="user_id" value="{$user_id}" />
-	<div class="row">
+	<div class="control-group">
 		{forminput}
 			<input type="text" name="find_objects" />
 			<input type="submit" value="{tr}filter{/tr}" name="search_objects" />
