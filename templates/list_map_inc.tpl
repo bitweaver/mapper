@@ -10,7 +10,7 @@
 	</div>
 {/form}
 
-<table class="data">
+<table class="table data">
 	<caption>{tr}Available Maps{/tr}</caption>
 	<tr>
 		<th>{smartlink ititle="Title" isort=title page=$page user_id=$user_id idefault=1}</th>
