@@ -4,7 +4,7 @@
 	<div class="control-group">
 		{forminput}
 			<input type="text" name="find_objects" />
-			<input type="submit" class="btn" value="{tr}filter{/tr}" name="search_objects" />
+			<input type="submit" class="btn btn-default" value="{tr}filter{/tr}" name="search_objects" />
 			{formhelp note="You can restrict the content listing to a given content type or apply a filter."}
 		{/forminput}
 	</div>
