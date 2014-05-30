@@ -7,7 +7,7 @@
 				<input type="hidden" name="page" value="{$page}" />
 
 			{if $gBitSystem->isPackageActive('mapper')}
-				<div class="control-group">
+				<div class="form-group">
 					{formlabel label="Font" for="font"}
 					{forminput}
 						<input type="text" name="font" id="font" size="50" value="{$mapperSettings.font|escape}" />
@@ -15,7 +15,7 @@
 				</div>
 
 
-				<div class="control-group">
+				<div class="form-group">
 					{formlabel label="Automatic XY Tracker" for="autotrack"}
 					{forminput}
 						<input type="checkbox" {if $mapperSettings.autotrack eq 'on'}checked="checked"{/if} name="autotrack" id="autotrack" />
@@ -23,7 +23,7 @@
 				</div>
 			{/if}
 
-				<div class="control-group submit">
+				<div class="form-group submit">
 					<input type="submit" class="btn btn-default" name="save" value="{tr}Apply Settings{/tr}" />
 				</div>
 			{/form}
